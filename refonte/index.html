@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <title>refonte du site</title> <!--nom de la page-->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">   <!--intégre du css--> 
+    <link rel="sgorcut icon" href="lesamisdevitotel.ico" type="image/x-icon"> <!--icone-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+	<body>
+
+        <header>
+          <div class="titre">
+            <h1>Les Amis de Vivotel</h1>
+          </div>
+
+          <nav id="navbar" class="navbar">
+            <a class="active" href="index.html">Accueil</a>
+            <a href="histoire.html">Histoire de Vitotel</a>
+            <a href="photos.html">Photos</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction2()"><div class="mh"></div><div class="mh"></div><div class="mh"></div class="mh"></a>
+          </nav>
+        </header>
+
+        <aside>
+
+        </aside>
+
+        <main>
+          <div class="slideshow">
+            <ul>
+                <li><img src="images-slide/IMG_23.JPG" alt="" width="850" height="600" /></li>
+                <li><img src="images-slide/Vitotel_10.jpg" alt="" width="850" height="600" /></li>
+                <li><img src="images-slide/IMG_3.jpg" alt="" width="850" height="600" /></li>
+            </ul>
+        </div>
+        </main>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+
+        <footer>
+          <nav id="footer-navbar">
+            <a class="foot" href="index.html">Accueil</a>
+            <a class="foot" href="histoire.html">Histoire de Vitotel</a>
+            <a class="foot" href="photos.html">Photos</a>
+            <div id="signature">
+              <a class="img-foot" href="index.html" ><img src="lesamisdevitotel00.jpg" width="150px" ></a>
+              <p>à Francis Durand -- Contact : <a href="mailto:contact@vitotel.fr">contact@vitotel.fr</a>
+                <br></br>Les amis de Vitotel, association loi 1901.
+              </p>
+              <p>License : <a href="http://www.creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons</a></p>
+            </div>
+          </nav>
+
+        </footer>
+  </body>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+ 
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ 
+ <script type="text/javascript">
+    $(function(){
+       setInterval(function(){
+          $(".slideshow ul").animate({marginLeft:-850},800,function(){
+             $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+          })
+       }, 3500);
+    });
+ </script>
+
+<script>
+  function myFunction2() {
+    var x = document.getElementById("navbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+</script>
+
+  </html>
