@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <title>refonte du site</title> <!--nom de la page-->
+  <link href="styles/style.css" rel="stylesheet" type="text/css">   <!--intégre du css--> 
+    <link rel="sgorcut icon" href="lesamisdevitotel.ico" type="image/x-icon"> <!--icone-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+	<body>
+
+        <header>
+          <div class="titre">
+            <h1>Les Amis de Vivotel</h1>
+          </div>
+
+          <nav id="navbar" class="navbar">
+            <a href="index.html">Accueil</a>
+            <a href="histoire.html">Histoire de Vitotel</a>
+            <a class="active" href="photos.html">Photos</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction2()"><div class="mh"></div><div class="mh"></div><div class="mh"></div class="mh"></a>
+          </nav>
+        </header>
+
+        <section>
+            <aside name="Form">
+
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_10.jpg"  name="img1" /></div>
+              <div class="card"><img id="ph" src="photo/IMG_25.JPG"           name="img2" /></div>
+              <div class="card"><img id="ph" src="photo/Vitotel_13.jpg"       name="img3" /></div>
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_4.jpg"   name="img4" /></div>
+              <div class="card"><img id="ph" src="photo/Vitotel_2.jpg"        name="img5" /></div>
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_5.jpg"   name="img6" /></div>
+              <div class="card"><img id="ph" src="photo/Vitotel_8.jpg"        name="img7" /></div>
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_9.jpg"   name="img8" /></div>
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_8.jpg"   name="img9" /></div>
+              <div class="card"><img id="ph" src="photo/2008/Vitotel_6.jpg"   name="img10"/></div>
+              <div class="card"><img id="ph" src="images-slide/IMG_3.jpg"     name="img11"/></div>
+              <div class="card"><img id="ph" src="images-slide/IMG_23.JPG"    name="img12"/></div>
+      
+            </aside>
+          </section>
+
+        <main>
+          
+        </main>
+        <footer>
+          <nav id="footer-navbar">
+            <a class="foot" href="index.html">Accueil</a>
+            <a class="foot" href="histoire.html">Histoire de Vitotel</a>
+            <a class="foot" href="photos.html">Photos</a>
+            <div id="signature">
+              <a class="img-foot" href="index.html" ><img src="lesamisdevitotel00.jpg" width="150px" ></a>
+              <p>à Francis Durand -- Contact : <a href="mailto:contact@vitotel.fr">contact@vitotel.fr</a>
+                <br></br>Les amis de Vitotel, association loi 1901.
+              </p>
+              <p>License : <a href="http://www.creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons</a></p>
+            </div>
+          </nav>
+
+        </footer>
+      <script>
+        function myFunction2() {
+          var x = document.getElementById("navbar");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+      </script>
+    </body>
+  </html>
